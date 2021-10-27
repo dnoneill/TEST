@@ -1,0 +1,34 @@
+---
+canvas: "https://www.e-newspaperarchives.ch/iiif/issue/LBP18880901-01/canvas/LBP18880901-01.1.1"
+order: 1
+---
+{
+    "type": "Annotation",
+    "body": [
+        {
+            "type": "TextualBody",
+            "value": "le bien public",
+            "purpose": "supplementing",
+            "creator": {
+                "id": "dnoneill",
+                "name": "dnoneill"
+            },
+            "created": "2021-10-27T22:39:27.901Z",
+            "modified": "2021-10-27T22:39:32.016Z"
+        }
+    ],
+    "target": {
+        "source": "https://www.e-newspaperarchives.ch/iiif/issue/LBP18880901-01/canvas/LBP18880901-01.1.1",
+        "selector": {
+            "type": "FragmentSelector",
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "value": "xywh=pixel:113.59991455078125,205.1999969482422,5745.599792480469,798.0000152587891"
+        },
+        "dcterms:isPartOf": {
+            "id": "https://www.e-newspaperarchives.ch//iiif/issue/LBP18880901-01/manifest.json",
+            "type": "Manifest"
+        }
+    },
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "id": "a781bc8c-b83b-418a-be41-48bd1819758c.json"
+}
