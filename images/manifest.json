@@ -6,6 +6,63 @@
   "type" : "Manifest",
   "@context" : "http://iiif.io/api/presentation/3/context.json",
   "items" : [ {
+    "width" : 5497,
+    "id" : "https://dnoneill.github.io/Test/images/Adam_Albrecht_-_Horses_at_the_PorchFXD/canvas/",
+    "label" : {
+      "none" : [ "Adam_Albrecht_-_Horses_at_the_PorchFXD" ]
+    },
+    "type" : "Canvas",
+    "items" : [ {
+      "id" : "https://dnoneill.github.io/Test/images/Adam_Albrecht_-_Horses_at_the_PorchFXD/AnnoPage/",
+      "type" : "AnnotationPage",
+      "items" : [ {
+        "motivation" : "Painting",
+        "id" : "https://dnoneill.github.io/Test/images/Adam_Albrecht_-_Horses_at_the_PorchFXD/annotation/",
+        "type" : "Annotation",
+        "body" : {
+          "service" : [ {
+            "tiles" : [ {
+              "scaleFactors" : [ 32, 16, 8, 4, 2, 1 ],
+              "width" : 1024,
+              "height" : 1024
+            } ],
+            "protocol" : "http://iiif.io/api/image",
+            "sizes" : [ {
+              "width" : 172,
+              "height" : 142
+            }, {
+              "width" : 344,
+              "height" : 284
+            }, {
+              "width" : 688,
+              "height" : 567
+            }, {
+              "width" : 1375,
+              "height" : 1133
+            }, {
+              "width" : 2749,
+              "height" : 2265
+            }, {
+              "width" : 5497,
+              "height" : 4529
+            } ],
+            "profile" : "http://iiif.io/api/image/2/level0.json",
+            "width" : 5497,
+            "@id" : "https://dnoneill.github.io/Test/images/Adam_Albrecht_-_Horses_at_the_PorchFXD",
+            "@context" : "http://iiif.io/api/image/2/context.json",
+            "height" : 4529
+          } ],
+          "format" : "image/jpeg",
+          "width" : 5497,
+          "id" : "https://dnoneill.github.io/Test/images/Adam_Albrecht_-_Horses_at_the_PorchFXD/full/full/0/default.jpg",
+          "type" : "Image",
+          "height" : 4529
+        },
+        "target" : "https://dnoneill.github.io/Test/images/Adam_Albrecht_-_Horses_at_the_PorchFXD/canvas/"
+      } ]
+    } ],
+    "height" : 4529
+  }, {
     "width" : 5057,
     "id" : "https://dnoneill.github.io/Test/images/Adam_Albrecht_-_Horses_at_the_Porch/canvas/",
     "label" : {
