@@ -7,7 +7,7 @@
 {% assign waxcollections = site.collections | where_exp: 'item', 'item.label != "exhibits"' | where_exp: 'item', 'item.label != "posts"' | map: "label" %}
 {% assign imagearray = '' | split: "" %}
 {% for image in images %}
-{% unless image contains 'assets' or image contains 'derivatives' %}
+{% unless image contains 'assets' or image contains 'derivatives' or image contains 'default.jpg' %}
  {% assign item = image | prepend: site.baseurl | prepend: site.url %}
  {% assign imagearray = imagearray | push: item %}
 {% endunless %}
@@ -21,8 +21,5 @@
  "preloadedcontent": {{site.data.preload | jsonify}},
 "customviews": [{% for customview in customviews %}{
 {{'filename' | jsonify}}:{{site.url | append: site.baseurl | append: customview.url| jsonify}},{{'json' | jsonify}}:{{customview.content | replace: '<script src="https://ncsu-libraries.github.io/annona/dist/annona.js"></script>', '' | replace: '<link rel="stylesheet" type="text/css" href="https://ncsu-libraries.github.io/annona/dist/annona.css">', '' | replace: "<", "&lt;" | replace: ">", "&gt;" | jsonify}}
-}{% unless forloop.last %},{% endunless %}{% endfor %}],
- "collections": [{% for collection in collections %}{
-{{'filename' | jsonify}}:{{site.url | append: site.baseurl | append: collection.url| jsonify}},{{'json' | jsonify}}:{{collection.content | replace: "<", "&lt;" | replace: ">", "&gt;"}}
 }{% unless forloop.last %},{% endunless %}{% endfor %}]
 }
