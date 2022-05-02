@@ -1,6 +1,8 @@
 ---
 ---
-{% assign manifestarray = site.pages | where_exp: 'item', 'item.name contains "manifest.json"' | sort_natural %}
+{% assign manifestarray = site.pages | where_exp: 'item', 'item.name contains "manifest.json"' | sort_natural | map: 'url' %}
+{% assign manifestarray2 = site.static_files | where_exp: 'item', 'item.name contains "manifest.json"' | sort_natural | map: 'path' %}
+{% assign manifestarray=manifestarray | concat: manifestarray2 %}
 {% assign customviews = site.exhibits | sort_natural %}
 {% assign waxcollections = site.collections | where_exp: 'item', 'item.label != "exhibits"' | where_exp: 'item', 'item.label != "posts"' | map: "label" %}
 {% assign imagearray = '' | split: "" %}
@@ -8,7 +10,7 @@
 {{'filename' | jsonify}}:{{site.url | append: site.baseurl | append: file.url | append:file.ext | jsonify}},{{'order' | jsonify}}:{{file.order | jsonify}}, {{'json' | jsonify}}:{{file.content | replace: "<", "&lt;" | replace: ">", "&gt;"}}
 }{% unless forloop.last %},{% endunless %}{% endfor %}],
 "manifests": [{% for manifest in manifestarray %}
-{{site.url | append: site.baseurl | append: manifest.url | jsonify}}
+{{site.url | append: site.baseurl | append: manifest | jsonify}}
 {% unless forloop.last %},{% endunless %}{% endfor %}], "images": {{imagearray| jsonify}},
  "preloadedcontent": {{site.data.preload | jsonify}},
 "customviews": [{% for customview in customviews %}{
